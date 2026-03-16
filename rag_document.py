@@ -8,7 +8,7 @@ from langchain_classic.chains.retrieval_qa.base import RetrievalQA
 
 
 # Load document
-loader = TextLoader("ai_billy/sample.csv")
+loader = TextLoader("./sample.csv")
 documents = loader.load()
 
 # Split documents
@@ -25,8 +25,6 @@ embeddings = OllamaEmbeddings(model="nomic-embed-text")
 # Store in ChromaDB locally
 db = Chroma.from_documents(chunks, embeddings, persist_directory="./chroma_db")
 
-
-
 # Initialize Gemma model
 llm = Ollama(model="gemma3:latest")
 
@@ -40,7 +38,11 @@ qa_chain = RetrievalQA.from_chain_type(
     retriever=retriever
 )
 
-query = "How is the performance of merchant id M-9921?"
+query = """You are act as financial analyst,
+            please create 4 list how is the performance of 
+            the merchant M-9921?"""
+
+
 response = qa_chain.invoke(query)
 print(response['result'])
 

@@ -1,0 +1,36 @@
+{
+  "metrics_history": [
+    {
+      "timestamp": "2026-03-16T19:39:48.426193",
+      "query": "You are act as financial analyst,\n            please create 4 list how is the performance of \n            the merchant M-9921?",
+      "start_time": 1773664649.372515,
+      "first_token_time": 1773664727.9923136,
+      "end_time": 1773664788.4254003,
+      "ttft_seconds": 78.61979866027832,
+      "ttft_ms": 78619.79866027832,
+      "total_time_seconds": 139.05288529396057,
+      "total_time_ms": 139052.88529396057,
+      "token_count": 141,
+      "tokens_per_second": 1.0140026918673652
+    }
+  ],
+  "summary": {
+    "total_queries": 1,
+    "ttft_ms": {
+      "min": 78619.79866027832,
+      "max": 78619.79866027832,
+      "avg": 78619.79866027832
+    },
+    "total_time_ms": {
+      "min": 139052.88529396057,
+      "max": 139052.88529396057,
+      "avg": 139052.88529396057
+    },
+    "tokens_per_second": {
+      "min": 1.0140026918673652,
+      "max": 1.0140026918673652,
+      "avg": 1.0140026918673652
+    },
+    "total_tokens": 141
+  }
+}
